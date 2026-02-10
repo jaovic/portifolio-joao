@@ -13,6 +13,7 @@ export default function SobrePage() {
 			<ul className="list-disc list-inside text-zinc-300">
 				<li>Código claro e pragmático</li>
 				<li>Performance como prioridade</li>
+				<li>Foco na experiência do usuário</li>
 			</ul>
 		</section>
 	);
