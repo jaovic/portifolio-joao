@@ -62,7 +62,7 @@ export default function Home() {
 						<div className="relative z-10 w-[220px] h-[300px] md:w-[280px] md:h-[380px]">
 							<Image
 								src="/foto-perfil.jpg"
-								alt="João Fernandes"
+								alt={t("profile_alt")}
 								fill
 								priority
 								className="object-cover"

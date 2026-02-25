@@ -1,42 +1,41 @@
 "use client";
 
+import { useTranslation } from "react-i18next";
+
 export default function SobrePage() {
+	const { t } = useTranslation();
+	const aboutBody = t("about_page.body", { returnObjects: true }) as string[];
+	const principles = t("about_page.principles", {
+		returnObjects: true,
+	}) as string[];
+
 	return (
 		<section className="py-20 px-6 max-w-3xl space-y-10">
 			<div className="space-y-4">
 				<h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-					Sobre Mim
+					{t("about_page.title")}
 				</h1>
 
 				<p className="text-lg text-[color:var(--muted-foreground)] leading-relaxed">
-					Sou desenvolvedor full stack com foco em arquitetura sólida,
-					manutenibilidade e performance. Gosto de construir sistemas que
-					aguentem escala e continuem simples de evoluir.
+					{t("about_page.intro")}
 				</p>
 			</div>
 
 			<div className="space-y-6 text-[color:var(--foreground)]/90 leading-relaxed">
-				<p>
-					Atuo principalmente com back-end, mas tenho forte entendimento de
-					front-end e experiência do usuário. Meu objetivo é reduzir
-					complexidade desnecessária e criar soluções pragmáticas que entreguem
-					valor real para o negócio.
-				</p>
-
-				<p>
-					Busco equilíbrio entre simplicidade e profundidade técnica, aplicando
-					abstrações quando realmente agregam clareza, escalabilidade e
-					manutenção no longo prazo.
-				</p>
+				{aboutBody.map((paragraph) => (
+					<p key={paragraph}>{paragraph}</p>
+				))}
 			</div>
 
 			<div className="pt-6 border-t border-zinc-200 dark:border-zinc-800">
-				<h2 className="text-xl font-semibold mb-4">Princípios</h2>
+				<h2 className="text-xl font-semibold mb-4">
+					{t("about_page.principlesTitle")}
+				</h2>
 
 				<ul className="space-y-3 text-[color:var(--foreground)]/85">
-					<li>Código claro e pragmático</li>
-					<li>Performance como prioridade</li>
-					<li>Foco na experiência do usuário</li>
+					{principles.map((item) => (
+						<li key={item}>{item}</li>
+					))}
 				</ul>
 			</div>
 		</section>

@@ -1,14 +1,19 @@
 "use client";
 
 import { Mail, Phone, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function ContatoPage() {
+	const { t } = useTranslation();
+
 	return (
 		<section className="py-20 space-y-8 max-w-xl">
-			<h1 className="text-4xl font-bold tracking-tight">Contato</h1>
+			<h1 className="text-4xl font-bold tracking-tight">
+				{t("contact_page.title")}
+			</h1>
 
 			<p className="text-[color:var(--muted-foreground)] text-lg leading-relaxed">
-				Quer falar sobre um projeto, vaga ou ideia? Me chama direto.
+				{t("contact_page.description")}
 			</p>
 
 			<div className="flex flex-col gap-4 mt-8">
@@ -21,7 +26,7 @@ export default function ContatoPage() {
 						className="text-[color:var(--muted-foreground)] group-hover:text-orange-500 transition-colors"
 					/>
 					<span className="text-[color:var(--muted-foreground)] group-hover:text-[color:var(--foreground)] transition-colors">
-						Email
+						{t("contact_page.methods.email")}
 					</span>
 				</a>
 
@@ -36,7 +41,7 @@ export default function ContatoPage() {
 						className="text-[color:var(--muted-foreground)] group-hover:text-orange-500 transition-colors"
 					/>
 					<span className="text-[color:var(--muted-foreground)] group-hover:text-[color:var(--foreground)] transition-colors">
-						WhatsApp
+						{t("contact_page.methods.whatsapp")}
 					</span>
 				</a>
 
@@ -51,7 +56,7 @@ export default function ContatoPage() {
 						className="text-[color:var(--muted-foreground)] group-hover:text-orange-500 transition-colors"
 					/>
 					<span className="text-[color:var(--muted-foreground)] group-hover:text-[color:var(--foreground)] transition-colors">
-						LinkedIn
+						{t("contact_page.methods.linkedin")}
 					</span>
 				</a>
 			</div>

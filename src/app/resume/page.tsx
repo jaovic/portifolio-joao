@@ -1,140 +1,59 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+
+type Experience = {
+	company: string;
+	role: string;
+	period: string;
+	highlights: string[];
+};
 
 export default function ResumePage() {
+	const { t } = useTranslation();
+	const experiences = t("resume_page.experiences", {
+		returnObjects: true,
+	}) as Experience[];
+
 	return (
 		<section className="min-h-svh py-20 px-6">
 			<div className="max-w-4xl mx-auto space-y-16">
 				{/* HEADER */}
 				<div className="space-y-4">
 					<h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-						Currículo
+						{t("resume_page.title")}
 					</h1>
 
 					<p className="text-[color:var(--muted-foreground)] text-lg">
-						Experiência profissional e atuação em projetos de alta complexidade.
+						{t("resume_page.subtitle")}
 					</p>
 
 					<Link
 						href="/"
 						className="text-orange-500 hover:underline transition-colors"
 					>
-						← Voltar para Home
+						{t("resume_page.backHome")}
 					</Link>
 				</div>
 
 				{/* EXPERIENCE */}
 				<div className="relative border-l border-zinc-200 dark:border-zinc-800 pl-8 space-y-14">
-					{/* Cactus Gaming */}
-					<div className="space-y-3 relative">
-						<div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-orange-500" />
-						<h2 className="text-2xl font-semibold">Cactus Gaming</h2>
-						<p className="text-orange-500 font-medium">
-							Desenvolvedor Back-end
-						</p>
-						<p className="text-sm text-[color:var(--muted-foreground)]">
-							Dez 2025 – Atual · Nova Lima/MG · Híbrido
-						</p>
-						<ul className="list-disc pl-6 space-y-2 text-[color:var(--foreground)]/90">
-							<li>
-								Desenvolvimento de aplicações Back-end com PHP (Laravel), MySQL,
-								Kafka e AWS.
-							</li>
-							<li>
-								Desenvolvimento de plataforma whitelabel de iGaming com
-								arquitetura flexível e escalável.
-							</li>
-						</ul>
-					</div>
-
-					{/* Petrus Software */}
-					<div className="space-y-3 relative">
-						<div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-orange-500" />
-						<h2 className="text-2xl font-semibold">Petrus Software</h2>
-						<p className="text-orange-500 font-medium">
-							Desenvolvedor Full Stack
-						</p>
-						<p className="text-sm text-[color:var(--muted-foreground)]">
-							Set 2025 – Dez 2025 · Nova Lima/MG · Presencial
-						</p>
-						<ul className="list-disc pl-6 space-y-2 text-[color:var(--foreground)]/90">
-							<li>
-								Desenvolvimento full stack com Node.js, PHP, Nuxt.js, Vue.js e
-								React.
-							</li>
-							<li>Plataforma whitelabel de iGaming utilizando Nuxt.js.</li>
-							<li>
-								Desenvolvimento de plataforma de ticketing com Next.js,
-								incluindo checkout com PIX e cartão de crédito.
-							</li>
-						</ul>
-					</div>
-
-					{/* Pratique Fitness */}
-					<div className="space-y-3 relative">
-						<div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-orange-500" />
-						<h2 className="text-2xl font-semibold">Pratique Fitness</h2>
-						<p className="text-orange-500 font-medium">
-							Desenvolvedor Full Stack
-						</p>
-						<p className="text-sm text-[color:var(--muted-foreground)]">
-							Abr 2025 – Set 2025 · Remoto
-						</p>
-						<ul className="list-disc pl-6 space-y-2 text-[color:var(--foreground)]/90">
-							<li>Onboarding do aplicativo com foco em UX e retenção.</li>
-							<li>
-								Plataforma de relacionamento B2B com gestão de pagamentos e
-								relatórios.
-							</li>
-							<li>
-								Implementação de checkout com gateway de pagamento e validação
-								de dados sensíveis.
-							</li>
-							<li>
-								Sistema financeiro com hierarquia de aprovação e dashboards.
-							</li>
-						</ul>
-					</div>
-
-					{/* BP Tech */}
-					<div className="space-y-3 relative">
-						<div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-orange-500" />
-						<h2 className="text-2xl font-semibold">BP Tech Ltda</h2>
-						<p className="text-orange-500 font-medium">
-							Desenvolvedor Full Stack
-						</p>
-						<p className="text-sm text-[color:var(--muted-foreground)]">
-							Dez 2023 – Abr 2025 · Belo Horizonte/MG · Híbrido
-						</p>
-						<ul className="list-disc pl-6 space-y-2 text-[color:var(--foreground)]/90">
-							<li>Sistema de distribuição de carteira com +100.000 boletos.</li>
-							<li>Gestão e pagamento de comissões.</li>
-							<li>Integração com gateway Itaú (débito automático).</li>
-							<li>Multi-cotações com AWS SQS e Lambda.</li>
-							<li>Manutenção evolutiva e sustentação de sistemas legados.</li>
-						</ul>
-					</div>
-
-					{/* QESH */}
-					<div className="space-y-3 relative">
-						<div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-orange-500" />
-						<h2 className="text-2xl font-semibold">QESH | Open Finance</h2>
-						<p className="text-orange-500 font-medium">
-							Desenvolvedor Back-end Node.js
-						</p>
-						<p className="text-sm text-[color:var(--muted-foreground)]">
-							Jan 2022 – Abr 2023 · Nova Lima/MG · Híbrido
-						</p>
-						<ul className="list-disc pl-6 space-y-2 text-[color:var(--foreground)]/90">
-							<li>Microsserviços para validação e compensação de TED e PIX.</li>
-							<li>
-								Implementação de segurança e validação de inputs em e-commerce.
-							</li>
-							<li>Participação no desenvolvimento de sistema IAM interno.</li>
-							<li>Clean Architecture, SOLID, testes unitários e integração.</li>
-						</ul>
-					</div>
+					{experiences.map((experience) => (
+						<div key={experience.company} className="space-y-3 relative">
+							<div className="absolute -left-[33px] top-1 w-3 h-3 rounded-full bg-orange-500" />
+							<h2 className="text-2xl font-semibold">{experience.company}</h2>
+							<p className="text-orange-500 font-medium">{experience.role}</p>
+							<p className="text-sm text-[color:var(--muted-foreground)]">
+								{experience.period}
+							</p>
+							<ul className="list-disc pl-6 space-y-2 text-[color:var(--foreground)]/90">
+								{experience.highlights.map((item) => (
+									<li key={item}>{item}</li>
+								))}
+							</ul>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>
