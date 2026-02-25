@@ -21,6 +21,7 @@ He has solid knowledge of frontend and backend development, integration with fin
             skills: "Skills",
             testimonials: "Testimonials",
             contact: "Contact",
+            resume: "My Resume",
         },
     },
     pt: {
@@ -40,6 +41,7 @@ Possui sólidos conhecimentos de desenvolvimento frontend e backend, integraçã
             skills: "Habilidades",
             testimonials: "Depoimentos",
             contact: "Contato",
+            resume: "Meu Currículo",
         },
     },
     es: {
@@ -59,11 +61,11 @@ Cuenta con sólidos conocimientos en desarrollo frontend y backend, integración
             skills: "Habilidades",
             testimonials: "Testimonios",
             contact: "Contacto",
+            resume: "Mi Currículum",
         },
     },
 };
 
-// 🔑 FUNÇÃO DE DETECÇÃO
 function getInitialLanguage() {
     if (typeof window === "undefined") return "pt";
 
@@ -85,7 +87,6 @@ i18n.use(initReactI18next).init({
     },
 });
 
-// 💾 SALVA TODA VEZ QUE MUDA
 i18n.on("languageChanged", (lang) => {
     if (typeof window !== "undefined") {
         localStorage.setItem("lang", lang);
