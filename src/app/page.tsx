@@ -50,7 +50,7 @@ export default function Home() {
 								href="/resume"
 								className="px-6 py-3 border border-orange-500 text-orange-500 text-center hover:bg-orange-500 hover:text-black transition"
 							>
-								My resume
+								{t("resume")}
 							</Link>
 						</div>
 					</div>
