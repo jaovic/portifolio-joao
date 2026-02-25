@@ -13,7 +13,7 @@ export default function ContatoPage() {
 
 			<div className="flex flex-col gap-4 mt-8">
 				<a
-					href="mailto:seuemail@email.com"
+					href="mailto:jvmsf05@gmail.com"
 					className="group flex items-center gap-4 p-4 rounded-xl border border-zinc-800 hover:border-orange-500 hover:bg-orange-500/5 transition-all duration-200"
 				>
 					<Mail
@@ -26,7 +26,7 @@ export default function ContatoPage() {
 				</a>
 
 				<a
-					href="https://wa.me/55999999999"
+					href="https://wa.me/5531997042924"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="group flex items-center gap-4 p-4 rounded-xl border border-zinc-800 hover:border-orange-500 hover:bg-orange-500/5 transition-all duration-200"
@@ -41,7 +41,7 @@ export default function ContatoPage() {
 				</a>
 
 				<a
-					href="https://linkedin.com"
+					href="https://www.linkedin.com/in/joao-victor-martins-silva/"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="group flex items-center gap-4 p-4 rounded-xl border border-zinc-800 hover:border-orange-500 hover:bg-orange-500/5 transition-all duration-200"
