@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="pt">
-			<body className="min-h-screen bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 antialiased">
+			<body className="min-h-screen bg-white text-[color:var(--foreground)] dark:bg-black antialiased">
 				<Providers>
 					<div className="min-h-screen flex flex-col">
 						<Header />

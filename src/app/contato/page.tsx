@@ -7,7 +7,7 @@ export default function ContatoPage() {
 		<section className="py-20 space-y-8 max-w-xl">
 			<h1 className="text-4xl font-bold tracking-tight">Contato</h1>
 
-			<p className="text-zinc-400 text-lg leading-relaxed">
+			<p className="text-[color:var(--muted-foreground)] text-lg leading-relaxed">
 				Quer falar sobre um projeto, vaga ou ideia? Me chama direto.
 			</p>
 
@@ -18,9 +18,9 @@ export default function ContatoPage() {
 				>
 					<Mail
 						size={20}
-						className="text-zinc-400 group-hover:text-orange-400 transition-colors"
+						className="text-[color:var(--muted-foreground)] group-hover:text-orange-500 transition-colors"
 					/>
-					<span className="text-zinc-300 group-hover:text-white transition-colors">
+					<span className="text-[color:var(--muted-foreground)] group-hover:text-[color:var(--foreground)] transition-colors">
 						Email
 					</span>
 				</a>
@@ -33,9 +33,9 @@ export default function ContatoPage() {
 				>
 					<Phone
 						size={20}
-						className="text-zinc-400 group-hover:text-orange-400 transition-colors"
+						className="text-[color:var(--muted-foreground)] group-hover:text-orange-500 transition-colors"
 					/>
-					<span className="text-zinc-300 group-hover:text-white transition-colors">
+					<span className="text-[color:var(--muted-foreground)] group-hover:text-[color:var(--foreground)] transition-colors">
 						WhatsApp
 					</span>
 				</a>
@@ -48,9 +48,9 @@ export default function ContatoPage() {
 				>
 					<Linkedin
 						size={20}
-						className="text-zinc-400 group-hover:text-orange-400 transition-colors"
+						className="text-[color:var(--muted-foreground)] group-hover:text-orange-500 transition-colors"
 					/>
-					<span className="text-zinc-300 group-hover:text-white transition-colors">
+					<span className="text-[color:var(--muted-foreground)] group-hover:text-[color:var(--foreground)] transition-colors">
 						LinkedIn
 					</span>
 				</a>

@@ -14,7 +14,7 @@ export default function Home() {
 					{/* TEXT */}
 					<div className="space-y-8">
 						{/* HELLO */}
-						<p className="text-lg tracking-wide text-zinc-400 flex items-center gap-2">
+						<p className="text-lg tracking-wide text-[color:var(--muted-foreground)] flex items-center gap-2">
 							<span>{t("hello")}</span>
 							<span className="text-orange-500 text-xl">•</span>
 						</p>
@@ -28,12 +28,12 @@ export default function Home() {
 								</h1>
 							</div>
 
-							<h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+							<h2 className="text-3xl md:text-5xl font-bold text-[color:var(--foreground)] leading-tight">
 								{t("position")}
 							</h2>
 						</div>
 
-						<p className="text-zinc-400 max-w-md whitespace-pre-line">
+						<p className="text-[color:var(--muted-foreground)] max-w-md whitespace-pre-line">
 							{t("description")}
 						</p>
 
@@ -41,14 +41,14 @@ export default function Home() {
 						<div className="flex flex-col sm:flex-row gap-4">
 							<Link
 								href="/contato"
-								className="px-6 py-3 bg-orange-500 text-black font-medium text-center hover:opacity-90 transition"
+								className="px-6 py-3 bg-orange-500 text-[color:var(--foreground)] font-medium text-center hover:opacity-90 transition"
 							>
 								{t("contact")}
 							</Link>
 
 							<Link
 								href="/resume"
-								className="px-6 py-3 border border-orange-500 text-orange-500 text-center hover:bg-orange-500 hover:text-black transition"
+								className="px-6 py-3 border border-orange-500 text-orange-500 text-center hover:bg-orange-500 hover:text-[color:var(--foreground)] transition"
 							>
 								{t("resume")}
 							</Link>

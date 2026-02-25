@@ -6,7 +6,7 @@ export default function ProjetosPage() {
 		<section className="py-16 space-y-12">
 			<header className="space-y-2">
 				<h1 className="text-4xl font-bold">Projetos</h1>
-				<p className="text-zinc-400 max-w-2xl">
+				<p className="text-[color:var(--muted-foreground)] max-w-2xl">
 					Alguns sistemas que construí focando em impacto real, manutenibilidade
 					e performance.
 				</p>
