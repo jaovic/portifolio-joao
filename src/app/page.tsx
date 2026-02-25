@@ -8,36 +8,66 @@ export default function Home() {
 	const { t } = useTranslation();
 
 	return (
-		<section className="h-screen flex items-center justify-center">
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-16 w-full">
-				<div className="flex flex-col justify-center space-y-8">
-					<h1 className="text-4xl md:text-6xl font-bold">{t("welcome")}</h1>
+		<section className="h-screen flex items-center">
+			<div className="max-w-6xl mx-auto px-6 w-full">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+					{/* TEXT */}
+					<div className="space-y-8">
+						{/* HELLO */}
+						<p className="text-lg tracking-wide text-zinc-400 flex items-center gap-2">
+							<span>Hello</span>
+							<span className="text-orange-500 text-xl">•</span>
+						</p>
 
-					<p className="text-zinc-400 whitespace-pre-line max-w-md">
-						{t("description")}
-					</p>
+						{/* NAME + LINE */}
+						<div className="space-y-4">
+							<div className="flex items-center gap-4">
+								<span className="block h-[2px] w-10 md:w-16 bg-orange-500" />
+								<h1 className="text-4xl md:text-6xl font-bold">
+									{t("welcome")}
+								</h1>
+							</div>
 
-					<div className="flex gap-4">
-						<Link
-							href="/contato"
-							className="px-6 py-3 bg-orange-500 text-black font-medium"
-						>
-							{t("contact")}
-						</Link>
+							<h2 className="text-3xl md:text-5xl font-bold text-white">
+								{t("role")}
+							</h2>
+						</div>
+
+						<p className="text-zinc-400 max-w-md whitespace-pre-line">
+							{t("description")}
+						</p>
+
+						{/* ACTIONS */}
+						<div className="flex flex-col sm:flex-row gap-4">
+							<Link
+								href="/contato"
+								className="px-6 py-3 bg-orange-500 text-black font-medium text-center"
+							>
+								{t("contact")}
+							</Link>
+
+							<Link
+								href="/resume"
+								className="px-6 py-3 border border-orange-500 text-orange-500 text-center hover:bg-orange-500 hover:text-black transition"
+							>
+								My resume
+							</Link>
+						</div>
 					</div>
-				</div>
 
-				<div className="relative flex items-center justify-center">
-					<div className="absolute w-[380px] h-[380px] rounded-full border-8 border-orange-500/80" />
+					{/* IMAGE */}
+					<div className="relative flex justify-center">
+						<div className="absolute w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full border-8 border-orange-500/80" />
 
-					<div className="relative z-10 w-[280px] h-[380px]">
-						<Image
-							src="/foto-perfil.jpg"
-							alt="João Fernandes"
-							width={280}
-							height={380}
-							priority
-						/>
+						<div className="relative z-10 w-[240px] h-[340px] md:w-[280px] md:h-[380px]">
+							<Image
+								src="/foto-perfil.jpg"
+								alt="João Fernandes"
+								fill
+								priority
+								className="object-cover rounded-2xl shadow-lg"
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
