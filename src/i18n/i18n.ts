@@ -10,7 +10,7 @@ const resources = {
             hello: "Hello",
             home: "Home",
             welcome: "Welcome to my portfolio",
-            description: `Full stack developer with 4 years of experience, specialized in Vue.js, React, Nest.js, and Node.js.
+            description: `Full stack developer with 4 years of experience, specialized in Vue.js, React, Next.js, Nest.js, and Node.js.
 
 Throughout his career, he has worked on complex solutions for fintechs and the development of robust and secure banking APIs.
 
@@ -31,7 +31,7 @@ He has solid knowledge of frontend and backend development, integration with fin
             hello: "Olá",
             home: "Início",
             welcome: "Bem-vindo ao meu portfólio",
-            description: `Desenvolvedor full stack com 4 anos de experiência, especializado em Vue.js, React, Nest.js e Node.js.
+            description: `Desenvolvedor full stack com 4 anos de experiência, especializado em Vue.js, React, Next.js, Nest.js e Node.js.
 
 Durante sua carreira, trabalhou em soluções complexas para fintechs e no desenvolvimento de APIs bancárias robustas e seguras.
 
@@ -52,7 +52,7 @@ Possui sólidos conhecimentos de desenvolvimento frontend e backend, integraçã
             hello: "Hola",
             home: "Inicio",
             welcome: "Bienvenido a mi portafolio",
-            description: `Desarrollador full stack con 4 años de experiencia, especializado en Vue.js, React, Nest.js y Node.js.
+            description: `Desarrollador full stack con 4 años de experiencia, especializado en Vue.js, React, Next.js, Nest.js y Node.js.
 
 A lo largo de su carrera, ha trabajado en soluciones complejas para fintechs y en el desarrollo de APIs bancarias robustas y seguras.
 
