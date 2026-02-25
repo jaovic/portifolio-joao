@@ -65,7 +65,7 @@ export default function Home() {
 								alt="João Fernandes"
 								fill
 								priority
-								className="object-cover rounded-2xl shadow-lg"
+								className="object-cover"
 							/>
 						</div>
 					</div>
