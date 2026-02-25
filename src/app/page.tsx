@@ -15,7 +15,7 @@ export default function Home() {
 					<div className="space-y-8">
 						{/* HELLO */}
 						<p className="text-lg tracking-wide text-zinc-400 flex items-center gap-2">
-							<span>Hello</span>
+							<span>{t("hello")}</span>
 							<span className="text-orange-500 text-xl">•</span>
 						</p>
 

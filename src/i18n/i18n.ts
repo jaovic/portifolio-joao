@@ -7,6 +7,7 @@ const resources = {
     en: {
         translation: {
             title,
+            hello: "Hello",
             home: "Home",
             welcome: "Welcome to my portfolio",
             description: `Full stack developer with 4 years of experience, specialized in Vue.js, React, Nest.js, and Node.js.
@@ -27,6 +28,7 @@ He has solid knowledge of frontend and backend development, integration with fin
     pt: {
         translation: {
             title,
+            hello: "Olá",
             home: "Início",
             welcome: "Bem-vindo ao meu portfólio",
             description: `Desenvolvedor full stack com 4 anos de experiência, especializado em Vue.js, React, Nest.js e Node.js.
@@ -47,6 +49,7 @@ Possui sólidos conhecimentos de desenvolvimento frontend e backend, integraçã
     es: {
         translation: {
             title,
+            hello: "Hola",
             home: "Inicio",
             welcome: "Bienvenido a mi portafolio",
             description: `Desarrollador full stack con 4 años de experiencia, especializado en Vue.js, React, Nest.js y Node.js.
