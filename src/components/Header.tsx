@@ -11,7 +11,6 @@ export default function Header() {
 	const { t, i18n } = useTranslation();
 	const pathname = usePathname();
 	const { theme, toggleTheme } = useTheme();
-
 	const [open, setOpen] = useState(false);
 
 	function changeLanguage(lang: "pt" | "en" | "es") {
@@ -42,7 +41,7 @@ export default function Header() {
 		"p-2 border border-zinc-700 rounded-full transition-all duration-200 hover:border-orange-500 hover:bg-orange-500/10 active:scale-95";
 
 	return (
-		<header className="sticky top-0 z-40 border-b border-zinc-800 bg-zinc-950 text-white backdrop-blur">
+		<header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950 text-white">
 			<div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 				<Link
 					href="/"
@@ -81,7 +80,6 @@ export default function Header() {
 						{t("contact")}
 					</Link>
 
-					{/* LANGUAGE */}
 					<div className="flex gap-4 ml-6">
 						{(["pt", "en", "es"] as const).map((lang) => (
 							<button
@@ -96,7 +94,6 @@ export default function Header() {
 						))}
 					</div>
 
-					{/* THEME */}
 					<button onClick={toggleTheme} className={`${iconButton} ml-4`}>
 						{theme === "dark" ? (
 							<Sun size={16} className="text-orange-400 transition-colors" />
@@ -127,7 +124,7 @@ export default function Header() {
 
 			{/* OVERLAY */}
 			<div
-				className={`fixed inset-0 z-40 bg-black/70 transition-opacity duration-300 ${
+				className={`fixed inset-0 z-40 bg-black/80 transition-opacity duration-300 ${
 					open
 						? "opacity-100 pointer-events-auto"
 						: "opacity-0 pointer-events-none"
@@ -138,7 +135,7 @@ export default function Header() {
 			{/* MOBILE MENU */}
 			<div
 				className={`fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm
-				bg-zinc-950 text-white
+				bg-zinc-950 shadow-2xl border-l border-zinc-800
 				transform transition-transform duration-300 ease-out
 				${open ? "translate-x-0" : "translate-x-full"}`}
 			>
