@@ -8,7 +8,7 @@ export default function Home() {
 	const { t } = useTranslation();
 
 	return (
-		<section className="h-screen flex items-center">
+		<section className="min-h-svh flex items-center py-16">
 			<div className="max-w-6xl mx-auto px-6 w-full">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 					{/* TEXT */}
@@ -22,14 +22,14 @@ export default function Home() {
 						{/* NAME + LINE */}
 						<div className="space-y-4">
 							<div className="flex items-center gap-4">
-								<span className="block h-[2px] w-10 md:w-16 bg-orange-500" />
+								<span className="block h-[2px] w-10 md:w-16 bg-orange-500 shrink-0" />
 								<h1 className="text-4xl md:text-6xl font-bold">
 									{t("welcome")}
 								</h1>
 							</div>
 
-							<h2 className="text-3xl md:text-5xl font-bold text-white">
-								{t("role")}
+							<h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+								{t("position")}
 							</h2>
 						</div>
 
@@ -41,7 +41,7 @@ export default function Home() {
 						<div className="flex flex-col sm:flex-row gap-4">
 							<Link
 								href="/contato"
-								className="px-6 py-3 bg-orange-500 text-black font-medium text-center"
+								className="px-6 py-3 bg-orange-500 text-black font-medium text-center hover:opacity-90 transition"
 							>
 								{t("contact")}
 							</Link>
@@ -56,10 +56,10 @@ export default function Home() {
 					</div>
 
 					{/* IMAGE */}
-					<div className="relative flex justify-center">
-						<div className="absolute w-[320px] h-[320px] md:w-[380px] md:h-[380px] rounded-full border-8 border-orange-500/80" />
+					<div className="relative flex justify-center mt-12 md:mt-0">
+						<div className="absolute w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full border-8 border-orange-500/80" />
 
-						<div className="relative z-10 w-[240px] h-[340px] md:w-[280px] md:h-[380px]">
+						<div className="relative z-10 w-[220px] h-[300px] md:w-[280px] md:h-[380px]">
 							<Image
 								src="/foto-perfil.jpg"
 								alt="João Fernandes"
